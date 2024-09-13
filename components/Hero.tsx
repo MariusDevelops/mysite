@@ -1,5 +1,6 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
@@ -35,6 +36,28 @@ const Hero = () => {
           className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white
          [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100"
         />
+      </div>
+
+      <div className="relative z-10 my-20 flex justify-center">
+        <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
+          <p className="max-w-80 text-center text-xs uppercase tracking-widest text-blue-100">
+            Dynamic Web Magic with Next.js
+          </p>
+
+          {/**
+           *  Link: https://ui.aceternity.com/components/text-generate-effect
+           *
+           *  change md:text-6xl, add more responsive code
+           */}
+          <TextGenerateEffect
+            words="Transforming Concepts into Seamless User Experiences"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+          />
+
+          <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
+            Hi! I&apos;m Marius, a Next.js Developer based in Lithuania.
+          </p>
+        </div>
       </div>
     </div>
   );
